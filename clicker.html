@@ -8,13 +8,12 @@
 <body>
 
     <button id="izvad" onclick="pogot()">Spied mani</button>
-    <p id="izvad"></p>
     
-    <script>
-        let kliks = 0; 
-        function pogot() {
-            kliks += 1;
-            document.getElementById("izvad").textContent = kliks;
+    <script> // src="" var ielikt iekšā script un ierakstīt failā kur būs script
+        let kliks = 0; // jauns mainīgas ar vērtību 0
+        function pogot() { // jauna funkcija pogot
+            kliks++; // pieskaita vienu klāt
+            document.getElementById("izvad").innerHTML = kliks; // izvada datus
         };
     </script>
 </body>
