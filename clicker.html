@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+</head>
+<body>
+
+    <button id="izvad" onclick="pogot()">Spied mani</button>
+    <p id="izvad"></p>
+    
+    <script>
+        let kliks = 0; 
+        function pogot() {
+            kliks += 1;
+            document.getElementById("izvad").textContent = kliks;
+        };
+    </script>
+</body>
+</html>
