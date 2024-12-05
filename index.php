@@ -45,3 +45,58 @@ echo "<br>";
 print_r($aso);
 
 */
+
+for ($x=1; $x<=100; $x++) { // izvada pāra skaitļus līdz 100.
+  if ($x%2==0){
+    echo $x;
+  }
+}
+
+echo "<br>";
+
+$y=10;
+for ($x=9; $x>=1; $x--) { // izvada faktoriālu.
+  $y = $y * $x; 
+}
+echo $y;
+
+echo "<br>";
+
+$x2 = 1;
+for ( $x1=1; $x1 <= 1000;) { // izvada visus Fibonači skaitļus līdz 1000.
+  echo $x1 . ", ";
+  $x3 = $x1 + $x2;
+  $x1 = $x2;
+  $x2 = $x3;
+}
+
+echo "<br>";
+
+for ($x=1; $x<100; $x++) { // izvada visus skaitļus kas dalās ar 3 vai 5 bet nedalās ar 15.
+  if ($x%3==0 || $x%5==0){
+    if ($x%15!=0) {
+      echo $x . ",";
+    }
+  }
+}
+
+echo "<br>";
+
+$pilseta = array("cesis"=>14699, "valmiera"=>23046);
+print_r($pilseta);
+
+echo "<br>";
+
+$animal = array("suns"=>"gaf", "kaķis"=>"mjau", "putns"=>"čiv");
+array_keys($animal);
+
+echo "<br>";
+
+$url = "https://jsonplaceholder.typicode.com/posts";
+$data = file_get_contents($url); // put the contents of the file into a variable
+$characters = json_decode($data); // decode the JSON feed
+print_r($characters);
+
+for () {
+
+}
