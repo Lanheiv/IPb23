@@ -88,15 +88,30 @@ print_r($pilseta);
 echo "<br>";
 
 $animal = array("suns"=>"gaf", "kaķis"=>"mjau", "putns"=>"čiv");
-array_keys($animal);
+print_r(array_keys($animal));
 
 echo "<br>";
 
-$url = "https://jsonplaceholder.typicode.com/posts";
-$data = file_get_contents($url); // put the contents of the file into a variable
-$characters = json_decode($data); // decode the JSON feed
-print_r($characters);
+/*
+$url = file_get_contents ("https://jsonplaceholder.typicode.com/posts");
+$data = json_decode($url);
 
-for () {
+foreach ($data as $d) {
+  echo "Virsraksts: $d->title <br>";
+  echo "Saturs: $d->body <br>";
+  echo "Lietotaka id: $d->userId <br> ---------- <br>";
+}
+*/
 
+$url2 = file_get_contents ("https://jsonplaceholder.typicode.com/todos");
+$data2 = json_decode($url2);
+
+foreach ($data2 as $data2) {
+  echo "Nsoaukums: $data2->title <br>";
+  if($data2->completed == 0) {
+    echo "Status: Neizpildīts <br>";
+  }else {
+    echo "Status: Izpildīts <br>";
+  }
+  echo "Autora id $data2->userId <br>";
 }
